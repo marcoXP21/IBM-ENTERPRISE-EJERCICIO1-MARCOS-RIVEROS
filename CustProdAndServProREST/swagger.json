@@ -1,0 +1,102 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "CustProdAndServProREST",
+    "version" : "1.0.0",
+    "description" : "CustProdAndServProREST"
+  },
+  "paths" : {
+    "/customer/retrieve" : {
+      "post" : {
+        "operationId" : "postRetrieve",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        },
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "description" : "Insert a retrieve",
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "schema" : {
+            "type" : "string"
+          },
+          "description" : "The request body for the operation",
+          "required" : true
+        }, {
+          "name" : "traceId",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "branchId",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "cardIdType",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "deviceId",
+          "in" : "query",
+          "type" : "string"
+        }, {
+          "name" : "serviceId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "consumerId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "channelId",
+          "in" : "header",
+          "type" : "boolean"
+        }, {
+          "name" : "timeStamp",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "messageId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "countryCode",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "parentId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "funcionalidadId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "netId",
+          "in" : "header",
+          "type" : "string"
+        }, {
+          "name" : "userId",
+          "in" : "header",
+          "type" : "string",
+          "required" : false
+        } ]
+      }
+    }
+  },
+  "basePath" : "/custprodandservprorest/v1",
+  "definitions" : {
+    "RequestBody" : {
+      "type" : "object",
+      "properties" : { }
+    },
+    "ResponseBody" : {
+      "type" : "object"
+    }
+  }
+}
